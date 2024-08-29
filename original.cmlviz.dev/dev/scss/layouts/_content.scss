@@ -1,0 +1,696 @@
+/*--------------------------------------
+   Content
+--------------------------------------*/
+
+// Notes...
+
+.content {
+
+	.wrap {
+
+		// Since there is currently no footer, this padding
+		// is added to show the bottom edge of the content
+		// more easily. This is only for temporary use.
+
+		padding-bottom: 100px;
+
+	}
+
+}
+
+		.quote {
+
+			border-top: 7px solid $green;
+			padding: 12px 0 0 0;
+
+		}
+
+			.overview {
+
+				position: relative;
+
+				.name {
+
+					margin: 0;
+					@include font-size(18);
+					line-height: (23/18);
+
+				}
+
+				.note {
+
+					margin: (5/12)+em 0 0 0;
+					@include font-size(12);
+					line-height: (15/12);
+					color: lighten($black, 30%);
+
+				}
+
+				.meta {
+
+					margin: 6px 0 0 0;
+
+					.price {
+
+						display: inline-block;
+						margin: 0 10px 0 0;
+						@include font-size(36);
+						line-height: (46/36);
+						font-weight: bold;
+
+					}
+
+					.change {
+
+						display: inline-block;
+						@include font-size(24);
+						line-height: (31/24);
+						font-weight: 500;
+
+					}
+
+						.decimal {}
+
+						.percent {}
+
+					.positive {
+
+						color: $green;
+
+						.decimal {}
+
+						.percent {}
+
+					}
+
+					.negative {
+
+						color: $red;
+
+						.decimal {}
+
+						.percent {}
+
+					}
+
+					.time {
+
+						@include font-size(12);
+						line-height: (15/12);
+						color: lighten($black, 30%);
+
+					}
+
+				}
+
+				.quote-search {
+
+					position: relative;
+					width: 100%;
+					margin: 16px 0 0 0;
+					padding: 0 40px 0 0;
+
+					@media screen and (min-width: 640px) {
+
+						position: absolute;
+						top: 2px;
+						right: 0;
+						max-width: 200px;
+						margin: 0;
+						z-index: 1;
+
+					}
+
+					@media screen and (min-width: 740px) {
+
+						max-width: 300px;
+
+					}
+
+					label {
+
+						display: none;
+
+					}
+
+					input {
+
+						border-right: none;
+
+						&:active,
+						&:focus {
+
+							border-color: $blue;
+
+						}
+
+					}
+
+					button {
+
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 40px;
+						height: 35px;
+						padding: 0;
+						text-indent: -9999px;
+						border-radius: 0 4px 4px 0;
+						background-image: url(../img/search.svg);
+						background-size: 40px 35px;
+						background-position: center center;
+						background-repeat: no-repeat;
+						box-shadow: none;
+						z-index: 1;
+
+						.no-svg & {
+
+							background-image: url(../img/search.png);
+
+						}
+
+					}
+
+				}
+
+				.people-also-watch {
+
+					margin: 10px 0 0 0;
+
+					@media screen and (min-width: 640px) {
+
+						position: absolute;
+						right: 0;
+						bottom: 1px;
+						margin: 0;
+						z-index: 1;
+
+					}
+
+					.title {
+
+						margin: 0;
+						font-weight: normal;
+						color: lighten($black, 30%);
+
+						@media screen and (min-width: 640px) {
+
+							text-align: right;
+
+						}
+
+					}
+
+					ul {
+
+						display: flex;
+						flex-direction: row;
+						flex-wrap: nowrap;
+						justify-content: flex-start;
+						align-items: flex-start;
+						align-content: flex-start;
+						margin: 0;
+						padding: 0;
+						list-style: none;
+
+						@media screen and (min-width: 640px) {
+
+							justify-content: flex-end;
+
+						}
+
+					}
+
+						li {
+
+							margin: 0 10px 0 0;
+							line-height: (16/13);
+							font-weight: 500;
+
+							&:last-of-type {
+
+								margin: 0;
+
+							}
+
+						}
+
+							a {
+
+								&:hover {}
+
+							}
+
+				}
+
+			}
+
+			.details {
+
+				margin: 16px 0 0 0;
+				padding: 0 0 18px 0;
+				border-bottom: 3px solid rgb(224, 224, 224);
+
+				.details-navigation {
+
+					border-bottom: 3px solid rgb(224, 224, 224);
+
+					.toggle {
+
+						display: inline-block;
+						padding: 15px 40px 15px 15px;
+						@include font-size(18);
+						line-height: (23/18);
+						border: 1px solid rgb(224, 224, 224);
+						border-bottom: none;
+						background: url(../img/details-toggle.svg) right center no-repeat;
+						background-size: 40px 35px;
+						cursor: pointer;
+
+						@media screen and (min-width: 1120px) {
+
+							display: none;
+
+						}
+
+						span {
+
+							// display: block;
+							// height: 54px;
+							// padding: 18px 15px 0 15px;
+
+						}
+
+						.label {
+
+							font-weight: bold;
+
+						}
+
+						.currently-viewing {}
+
+					}
+
+					// .details-navigation-container {
+
+					// 	// display: none;
+
+					// 	@media screen and (min-width: 1120px) {
+
+					// 		display: block;
+
+					// 	}
+
+					// 	// While open on smaller screen views
+
+					// 	&.open {
+
+					// 		display: block;
+
+					// 	}
+
+					// }
+
+					// 	ul {
+
+					// 		display: flex;
+					// 		flex-direction: row;
+					// 		flex-wrap: wrap;
+					// 		justify-content: flex-start;
+					// 		align-items: flex-start;
+					// 		align-content: flex-start;
+					// 		margin: 0;
+					// 		padding: 0;
+					// 		list-style: none;
+					// 		border-top: 2px solid rgb(224, 224, 224);
+
+					// 		@media screen and (min-width: 1120px) {
+
+					// 			flex-wrap: nowrap;
+					// 			border: none;
+
+					// 		}
+
+					// 	}
+
+					// 		li {
+
+					// 			width: 100%;
+					// 			font-weight: 500;
+					// 			border-top: 1px solid rgb(224, 224, 224);
+
+					// 			@media screen and (min-width: 500px) {
+
+					// 				width: 50%;
+
+					// 			}
+
+					// 			&:nth-child(odd) {
+
+					// 				@media screen and (min-width: 500px) {
+
+					// 					border-right: 1px solid rgb(224, 224, 224);
+
+					// 				}
+
+					// 			}
+
+					// 			@media screen and (min-width: 1120px) {
+
+					// 				width: auto;
+					// 				border: none;
+
+					// 				&:nth-child(odd) {
+
+					// 					border: none;
+
+					// 				}
+
+					// 			}
+
+					// 			&.active {
+
+					// 				position: relative;
+
+					// 				@media screen and (min-width: 1120px) {
+
+					// 					box-shadow: 0 3px 0 $blue;
+
+					// 				}
+
+					// 				a {
+
+					// 					color: $black;
+					// 					background: rgb(204, 229, 255);
+
+					// 					&:hover {}
+
+					// 				}
+
+					// 				&:after {
+
+					// 					content: "";
+					// 					position: absolute;
+					// 					left: 0;
+					// 					bottom: 0;
+					// 					width: 100%;
+					// 					height: 3px;
+					// 					background: $blue;
+					// 					z-index: 1;
+
+					// 					@media screen and (min-width: 1120px) {
+
+					// 						content: none;
+
+					// 					}
+
+					// 				}
+
+					// 			}
+
+					// 		}
+
+					// 			a {
+
+					// 				display: block;
+					// 				height: 54px;
+					// 				padding: 18px 15px 0 15px;
+					// 				text-decoration: none;
+
+					// 				&:hover {
+
+					// 					background: rgb(238, 247, 254);
+
+					// 				}
+
+					// 			}
+
+				}
+
+				.details-content {
+
+					margin: 10px 0 0 0;
+
+				}
+
+					.panels {}
+
+						.panel {
+
+							display: none;
+
+							&.active {
+
+								display: block;
+
+							}
+
+							.inner-wrap {
+
+								// background: pink;
+
+							}
+
+						}
+
+						// Summary
+
+						@import "panels/summary";
+
+						// Statistics
+
+						@import "panels/statistics";
+
+						// Profile
+
+						@import "panels/profile";
+
+						// Stock Chart
+
+						@import "panels/stock-chart";
+
+						// Risk Chart
+
+						@import "panels/risk-chart";
+
+						// Financials
+
+						@import "panels/financials";
+
+						// Financial Charts
+
+						@import "panels/financial-charts";
+
+						// Holders
+
+						@import "panels/holders";
+
+						// Analysts
+
+						@import "panels/analysts";
+
+						// Option Back-Tester
+
+						@import "panels/option-back-tester";
+
+			}
+
+
+
+
+.transformer-tabs {
+
+	border-top: 1px solid rgb(224, 224, 224);
+	// border-bottom: 3px solid rgb(224, 224, 224);
+
+	@media screen and (min-width: 1120px) {
+
+		border: none;
+
+	}
+
+	ul {
+
+		position: relative;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background: $white;
+		overflow: hidden;
+
+		@media screen and (min-width: 1120px) {
+
+			position: static;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			align-content: flex-start;
+			background: none;
+			overflow: visible;
+
+		}
+
+		&:after {
+
+			content: "";
+			position: absolute;
+			top: 10px;
+			right: 4px;
+			width: 40px;
+			height: 35px;
+			background: url(../img/details-toggle.svg) center center no-repeat;
+			background-size: 40px 35px;
+			pointer-events: none;
+			z-index: 2;
+
+			@media screen and (min-width: 1120px) {
+
+				content: none;
+
+			}
+
+		}
+
+		// While open on smaller screen views...
+
+		&.open {
+
+			ul {}
+
+				li {}
+
+					a {
+
+						position: relative;
+						display: block;
+
+						@media screen and (min-width: 1120px) {
+
+							position: static;
+
+						}
+
+						&:hover {}
+
+						&.active {
+
+							padding-left: 15px;
+							padding-top: 18px;
+							@include font-size(13);
+							line-height: (20/13);
+							font-weight: 500;
+							background: rgb(204, 229, 255);
+
+							&:before {
+
+								content: none;
+
+							}
+
+						}
+
+					}
+
+		}
+
+	}
+
+		li {
+
+			display: block;
+			padding: 0;
+			font-weight: 500;
+			vertical-align: bottom;
+
+		}
+
+			a {
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: inline-block;
+				width: 100%;
+				height: 54px;
+				padding: 18px 15px 0 15px;
+				color: $blue;
+				text-decoration: none;
+
+				@media screen and (min-width: 1120px) {
+
+					position: static;
+					left: auto;
+					top: auto;
+					display: block;
+					width: auto;
+
+				}
+
+				&:hover {
+
+					background: rgb(238, 247, 254);
+
+				}
+
+				&.active {
+
+					position: relative;
+					padding-left: 0;
+					@include font-size(18);
+					line-height: (23/18);
+					font-weight: normal;
+					padding-top: 16px;
+					color: $black;
+					background: $white;
+					z-index: 1;
+
+					@media screen and (min-width: 1120px) {
+
+						padding-left: 15px;
+						padding-top: 18px;
+						@include font-size(13);
+						line-height: (20/13);
+						font-weight: 500;
+						background: rgb(204, 229, 255);
+						box-shadow: 0 3px 0 $blue;
+
+					}
+
+					&:before {
+
+						content: "Details: ";
+						font-weight: bold;
+
+						@media screen and (min-width: 1120px) {
+
+							content: none;
+
+						}
+
+					}
+
+				}
+
+			}
+
+}
+
+.tabs {
+
+	> div {
+
+		display: none;
+		padding: 1rem;
+
+	}
+
+	> .active {
+
+		display: block;
+		background: pink;
+
+	}
+
+}

@@ -1,0 +1,22 @@
+/*--------------------------------------
+   Stock Chart
+--------------------------------------*/
+
+// Notes...
+
+#stock-chart {
+
+	&.active {}
+
+	.inner-wrap {}
+
+}
+
+		.stock-chart-content {
+
+			// Adjustment to line up with other panels
+
+			padding: 14px 0 10px 0;
+			text-align: center;
+
+		}

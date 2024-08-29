@@ -1,0 +1,480 @@
+/*--------------------------------------
+   Financials
+--------------------------------------*/
+
+// Notes...
+
+#financials {
+
+	&.active {}
+
+	.inner-wrap {}
+
+}
+
+		.financials-content {
+
+			// Adjustment to line up with other panels
+
+			padding: 16px 0 14px 0;
+
+			.financials-navigation {
+
+				margin: 0 0 16px 0;
+
+				@media screen and (min-width: 600px) {
+
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					justify-content: space-between;
+					align-items: flex-start;
+					align-content: flex-start;
+
+				}
+
+			}
+
+				.financials-primary-navigation {
+
+					ul {
+
+						margin: 0;
+						padding: 0;
+						list-style: none;
+						@include group;
+
+						@media screen and (min-width: 420px) {
+
+							display: flex;
+							flex-direction: row;
+							flex-wrap: wrap;
+							justify-content: flex-start;
+							align-items: flex-start;
+							align-content: flex-start;
+
+						}
+
+						&:before {
+
+							content: "Show: ";
+
+						}
+
+					}
+
+						li {
+
+							font-weight: bold;
+
+							@media screen and (min-width: 420px) {
+
+								border-right: 1px solid rgb(224, 224, 224);
+
+							}
+
+							&:last-of-type {
+
+								border: none;
+
+								a {
+
+									padding-right: 0;
+
+								}
+
+							}
+
+						}
+
+							a {
+
+								display: block;
+								text-decoration: none;
+
+								@media screen and (min-width: 420px) {
+
+									padding: 0 10px;
+
+								}
+
+								&:hover {
+
+									color: $black;
+
+								}
+
+							}
+
+						.active {
+
+							a {
+
+								color: $black;
+
+								&:hover {}
+
+							}
+
+						}
+
+				}
+
+				.financials-secondary-navigation {
+
+					margin: 16px 0 0 0;
+
+					@media screen and (min-width: 600px) {
+
+						margin: 0;
+
+					}
+
+					ul {
+
+						display: flex;
+						flex-direction: row;
+						flex-wrap: wrap;
+						justify-content: flex-start;
+						align-items: flex-start;
+						align-content: flex-start;
+						margin: 0;
+						padding: 0;
+						list-style: none;
+
+						&:before {
+
+							content: "Timeframe: ";
+
+							@media screen and (min-width: 600px) {
+
+								content: none;
+
+							}
+
+						}
+
+					}
+
+						li {
+
+							border-right: 1px solid rgb(224, 224, 224);
+							font-weight: bold;
+							cursor: pointer;
+
+							&:last-of-type {
+
+								border: none;
+
+								span {
+
+									padding-right: 0;
+
+								}
+
+							}
+
+						}
+
+							span {
+
+								display: block;
+								padding: 0 10px;
+								color: $blue;
+
+								&:hover {
+
+									color: $black;
+
+								}
+
+							}
+
+						.active {
+
+							span {
+
+								color: $black;
+
+								&:hover {}
+
+							}
+
+						}
+
+				}
+
+			// Topics
+
+			.financials-topics {}
+
+				.financials-topic {
+
+					display: none;
+
+					// Active Topic
+
+					&.active {
+
+						display: block;
+
+					}
+
+					.caption {
+
+						margin: 32px 0 15px 0;
+
+					}
+
+						h3 {
+
+							display: inline-block;
+							margin: 0 20px 0 0;
+							@include font-size(16);
+							line-height: (20/16);
+							font-weight: bold;
+							text-align: left;
+
+						}
+
+						.note {
+
+							display: inline-block;
+							margin: (5/11)+em 0 0 0;
+							@include font-size(11);
+							line-height: (14/11);
+							font-weight: normal;
+							color: lighten($black, 50%);
+
+						}
+
+				}
+
+					.financials-topic-timeframe {
+
+						display: none;
+
+						// Active Timeframe
+
+						&.financials-topic-timeframe-active {
+
+							display: block;
+
+						}
+
+					}
+
+			table {
+
+				width: 100%;
+				border-collapse: collapse;
+				border-spacing: 0;
+
+			}
+
+				caption {
+
+					@include font-size(16);
+					line-height: (20/16);
+					font-weight: bold;
+					text-align: left;
+
+					.note {
+
+						// display: block;
+						margin: 0 0 0 20px;
+						@include font-size(11);
+						line-height: (14/11);
+						font-weight: normal;
+						color: lighten($black, 50%);
+
+					}
+
+				}
+
+				thead {}
+
+				tbody {}
+
+					tr {
+
+						height: auto;
+
+					}
+
+						th {
+
+							padding: 11px 8px 11px 8px;
+							height: auto;
+							line-height: (14/13);
+							text-align: left;
+							border-bottom: 1px solid rgb(224, 224, 224);
+
+							&:first-of-type {
+
+								padding-left: 0;
+
+							}
+
+							&.th-date {
+
+								font-weight: normal;
+								color: lighten($black, 50%);
+
+							}
+
+						}
+
+						td {
+
+							padding: 11px 8px 11px 8px;
+							line-height: (14/13);
+							border-bottom: 1px solid rgb(224, 224, 224);
+
+							&:first-of-type {
+
+								padding-left: 0;
+
+							}
+
+							&.positive {
+
+								color: $green;
+
+							}
+
+						}
+
+			.table-wrapper {
+
+				position: relative;
+				margin: 0 0 0 0;
+				border-left: 1px solid rgb(224, 224, 224);
+				border-right: 1px solid rgb(224, 224, 224);
+				border-top: 1px solid rgb(224, 224, 224);
+				// border-right: 1px solid #ccc;
+				overflow: hidden;
+
+				&:after {
+
+					// content: "";
+					// position: absolute;
+					// right: -20px;
+					// top: 0;
+					// bottom: 0;
+					// width: 20px;
+					// background: $white;
+					// box-shadow: 0 0 7px rgba($black, 0.35);
+					// z-index: 1;
+
+					@media screen and (min-width: 480px) {
+
+						// content: none;
+
+					}
+
+				}
+
+				.scrollable {
+
+					margin-left: 160px;
+					overflow: scroll;
+					overflow-y: hidden;
+
+					table {
+
+						margin-top: 0 !important;
+
+					}
+
+						tr {
+
+							height: 37px !important;
+
+						}
+
+							tbody {}
+
+								th {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+
+								}
+
+								td {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+
+								}
+
+				}
+
+				.pinned {
+
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 160px;
+					background: $white;
+					overflow: hidden;
+					overflow-x: scroll;
+					// border-left: 1px solid $blue;
+					// border-right: 1px solid $blue;
+
+					table {
+
+						width: 100%;
+						margin-top: 0 !important;
+						border-left: none;
+						border-right: none;
+
+					}
+
+						tbody {}
+
+							tr {
+
+								height: 37px !important;
+
+							}
+
+								th {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+									// color: $white;
+									background: rgb(244, 244, 244);
+									padding-left: 11px;
+
+								}
+
+								td {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+									background: rgb(244, 244, 244);
+									padding-left: 11px;
+
+									&:last-child {
+
+										// border-bottom: 0;
+
+									}
+
+								}
+
+				}
+
+				// Need to organize...
+
+				table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
+
+			}
+
+		}

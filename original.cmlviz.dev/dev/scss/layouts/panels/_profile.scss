@@ -1,0 +1,96 @@
+/*--------------------------------------
+   Profile
+--------------------------------------*/
+
+// Notes...
+
+#profile {
+
+	&.active {}
+
+	.inner-wrap {}
+
+}
+
+		.profile-content {
+
+			// Adjustment to line up with other panels
+
+			padding: 14px 0 10px 0;
+
+			.h-card {
+
+				line-height: (22/13) + em;
+
+			}
+
+				.p-name {
+
+					margin: 0 0 (10/16)+em 0;
+					@include font-size(16);
+					line-height: (27/16);
+					font-weight: bold;
+
+				}
+
+				.p-adr {}
+
+					.p-street-address {}
+
+					.p-locality {}
+
+					.p-region {}
+
+					.p-postal-code {}
+
+					.p-country-name {}
+
+				.p-tel {
+
+					a {
+
+						&:hover {}
+
+					}
+
+				}
+
+				.u-url {
+
+					a {
+
+						&:hover {}
+
+					}
+
+				}
+
+			.description {
+
+				width: 100%;
+				max-width: 600px;
+				margin: 37px 0 0 0;
+
+				h3 {
+
+					margin: 0 0 (18/15)+em 0;
+					@include font-size(15);
+					line-height: (15/15);
+
+				}
+
+				p {
+
+					&:first-of-type {}
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+			}
+
+		}

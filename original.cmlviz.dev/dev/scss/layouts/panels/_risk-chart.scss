@@ -1,0 +1,207 @@
+/*--------------------------------------
+   Risk Chart
+--------------------------------------*/
+
+// Notes...
+
+#risk-chart {
+
+	&.active {}
+
+	.inner-wrap {}
+
+}
+
+		.risk-chart-content {
+
+			// Adjustment to line up with other panels
+
+			padding: 18px 0 10px 0;
+
+			.content-group {
+
+				@media screen and (min-width: 860px) {
+
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					justify-content: space-between;
+					align-items: flex-start;
+					align-content: flex-start;
+
+				}
+
+			}
+
+				.table-data {
+
+					margin: 0 0 30px 0;
+
+					@media screen and (min-width: 860px) {
+
+						flex-grow: 1;
+						flex-shrink: 1;
+						flex-basis: 0;
+						margin: 0;
+
+					}
+
+					table {
+
+						width: 100%;
+						border-collapse: collapse;
+						border-spacing: 0;
+
+					}
+
+						caption {
+
+							@include font-size(16);
+							line-height: (20/16);
+							font-weight: bold;
+							text-align: left;
+
+						}
+
+						thead {}
+
+						tbody {}
+
+							tr {
+
+								height: 36px;
+
+							}
+
+								th {
+
+									padding-top: 11px;
+									height: 47px;
+									line-height: (14/13);
+									text-align: left;
+									border-bottom: 1px solid rgb(224, 224, 224);
+
+								}
+
+								td {
+
+									line-height: (14/13);
+									border-bottom: 1px solid rgb(224, 224, 224);
+
+								}
+
+								.td-label {}
+
+								.td-code {}
+
+								.td-value {
+
+									font-weight: bold;
+									text-align: right;
+
+								}
+
+				}
+
+				.chart {
+
+					width: 100%;
+					max-width: 500px;
+
+					@media screen and (min-width: 860px) {
+
+						flex-grow: 0;
+						flex-shrink: 0;
+						flex-basis: 500px;
+						margin: 0 0 0 30px;
+
+					}
+
+					h3 {
+
+						margin-top: 0;
+						@include font-size(16);
+						line-height: (20/16);
+
+						span {
+
+							display: block;
+							margin: (6/11)+em 0 0 0;
+							@include font-size(11);
+							line-height: (14/11);
+							font-weight: normal;
+							color: lighten($black, 50%);
+
+						}
+
+					}
+
+					.scatter-plot {
+
+						height: 450px;
+						color: lighten($black, 65%);
+						text-align: center;
+						background: lighten($black, 85%);
+
+						p {
+
+							position: relative;
+							top: 50%;
+							margin: 0;
+							transform: translateY(-50%);
+
+						}
+
+					}
+
+					.legend {}
+
+						h4 {}
+
+						ul {
+
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+						}
+
+							li {}
+
+							span {
+
+								padding: 0 3px;
+
+							}
+
+							.blue {
+
+								color: $white;
+								background-color: blue;
+
+							}
+
+							.black {
+
+								color: $white;
+								background-color: black;
+
+							}
+
+							.red {
+
+								color: $white;
+								background-color: red;
+
+							}
+
+							.green {
+
+								color: $white;
+								background-color: green;
+
+							}
+
+				}
+
+		}

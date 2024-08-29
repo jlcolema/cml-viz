@@ -1,0 +1,261 @@
+/*--------------------------------------
+   Holders
+--------------------------------------*/
+
+// Notes...
+
+#holders {
+
+	&.active {}
+
+	.inner-wrap {}
+
+}
+
+		.holders-content {
+
+			// Adjustment to line up with other panels
+
+			padding: 18px 0 14px 0;
+
+			table {
+
+				width: 100%;
+				border-collapse: collapse;
+				border-spacing: 0;
+
+				&:first-of-type {
+
+					caption {
+
+						// Temporary vertical spacing fix.
+
+						margin: 0 0 11px 0;
+
+					}
+
+				}
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
+
+				caption {
+
+					@include font-size(16);
+					line-height: (20/16);
+					font-weight: bold;
+					text-align: left;
+
+				}
+
+				thead {}
+
+				tbody {}
+
+					tr {
+
+						height: auto;
+
+					}
+
+						th {
+
+							padding: 11px 8px 11px 8px;
+							height: auto;
+							line-height: (14/13);
+							text-align: left;
+							border-bottom: 1px solid rgb(224, 224, 224);
+
+						}
+
+						td {
+
+							padding: 11px 8px 11px 8px;
+							line-height: (14/13);
+							border-bottom: 1px solid rgb(224, 224, 224);
+
+							&:first-of-type {
+
+								padding-left: 0;
+
+							}
+
+						}
+
+			// For New Design
+
+			.new-design {
+
+				margin: 30px 0 0 0 !important;
+
+				thead {}
+
+				tbody {}
+
+					tr {
+
+						height: auto;
+
+						&:hover {
+
+							td {
+
+								@media screen and (min-width: 800px) {
+
+									background: rgb(224, 224, 224);
+
+								}
+
+							}
+
+						}
+
+					}
+
+						th {
+
+							padding: 11px 8px 11px 8px;
+							height: auto;
+							color: $blue;
+							border-top: 1px solid $blue;
+							border-bottom-color: $blue;
+
+						}
+
+						td {
+
+							padding: 11px 8px 11px 8px;
+
+						}
+
+			}
+
+			.table-wrapper {
+
+				position: relative;
+				margin: 30px 0 0 0;
+				border-left: 1px solid rgb(224, 224, 224);
+				border-right: 1px solid rgb(224, 224, 224);
+				// border-right: 1px solid #ccc;
+				overflow: hidden;
+
+				&:after {
+
+					// content: "";
+					// position: absolute;
+					// right: -20px;
+					// top: 0;
+					// bottom: 0;
+					// width: 20px;
+					// background: $white;
+					// box-shadow: 0 0 7px rgba($black, 0.35);
+					// z-index: 1;
+
+				}
+
+				.scrollable {
+
+					margin-left: 160px;
+					overflow: scroll;
+					overflow-y: hidden;
+
+					table {
+
+						margin-top: 0 !important;
+
+					}
+
+						tr {
+
+							height: 37px !important;
+
+						}
+
+							tbody {}
+
+								th {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+
+								}
+
+								td {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+
+								}
+
+				}
+
+				.pinned {
+
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 160px;
+					background: $white;
+					overflow: hidden;
+					overflow-x: scroll;
+					// border-left: 1px solid $blue;
+					// border-right: 1px solid $blue;
+
+					table {
+
+						width: 100%;
+						margin-top: 0 !important;
+						border-left: none;
+						border-right: none;
+
+					}
+
+						tbody {}
+
+							tr {
+
+								height: 37px !important;
+
+							}
+
+								th {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+									color: $white;
+									background: $blue;
+
+								}
+
+								td {
+
+									position: relative;
+									white-space: nowrap;
+									overflow: hidden;
+									background: rgb(244, 244, 244);
+
+									&:last-child {
+
+										// border-bottom: 0;
+
+									}
+
+								}
+
+				}
+
+				// Need to organize...
+
+				table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
+
+			}
+
+		}
